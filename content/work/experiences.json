@@ -3,70 +3,63 @@
     {
       "id": "namma-yatri",
       "company": "Namma Yatri",
-      "role": "Senior Product Designer",
-      "period": "2022 - Present",
-      "description": "Leading design for India's first open-source ride-hailing platform, serving millions of users across multiple cities.",
+      "role": "Growth",
+      "period": "Present",
+      "description": "Sipping a lot of coffee and getting things done. Working on slashing CAC, scaling & engaging users for Moving Tech's portfolio of apps.",
       "achievements": [
-        "Redesigned the rider app, increasing booking completion rate by 34%",
-        "Built and scaled the design system used across 4 product lines",
-        "Led the driver onboarding experience, reducing drop-off by 28%",
-        "Established design ops practices for a team of 8 designers"
+        "Managing growth for the entire app portfolio: Namma Yatri, Yatri Sathi, Odisha Yatri, Chennai One & Kerala Savaari",
+        "0-1 scaling of customer acquisition and rides for Bharat Taxi",
+        "Refreshing dashboards at odd hours out of curiosity & thrill"
       ],
       "metrics": [
-        { "label": "Daily Active Users", "value": "2M+" },
-        { "label": "Booking Rate Increase", "value": "34%" },
-        { "label": "Driver Retention", "value": "+28%" }
+        { "label": "Apps", "value": "5+" },
+        { "label": "Focus", "value": "CAC" },
+        { "label": "Stage", "value": "Scale" }
       ],
       "learnings": [
-        "Scale requires systems thinking—individual solutions don't scale",
-        "Open-source communities bring unique design challenges and opportunities",
-        "Local context matters enormously in product design"
+        "Will update soon!"
       ]
     },
     {
       "id": "brick-bolt",
       "company": "Brick&Bolt",
-      "role": "Product Lead",
-      "period": "2020 - 2022",
-      "description": "Led product strategy and design for a construction-tech startup digitizing home construction in India.",
+      "role": "Growth",
+      "period": "Previous",
+      "description": "Details coming soon.",
       "achievements": [
-        "Launched customer app from 0 to 100K+ downloads in first year",
-        "Designed end-to-end construction tracking experience",
-        "Built internal tools reducing project management overhead by 40%",
-        "Established the company's first design team and processes"
+        "More details to be added"
       ],
       "metrics": [
-        { "label": "App Downloads", "value": "100K+" },
-        { "label": "Operational Efficiency", "value": "+40%" },
-        { "label": "Customer NPS", "value": "72" }
+        { "label": "Status", "value": "TBD" }
       ],
       "learnings": [
-        "Complex B2B2C products require deep domain expertise",
-        "Internal tools deserve the same design attention as customer-facing products",
-        "Construction is ripe for thoughtful digital transformation"
+        "Will update soon!"
       ]
     },
     {
       "id": "airtribe",
       "company": "Airtribe",
-      "role": "Founding Designer",
-      "period": "2018 - 2020",
-      "description": "First design hire at an ed-tech startup, building the learning platform from scratch.",
+      "role": "Growth",
+      "period": "Seed Stage",
+      "description": "Working in a seed stage startup & being part of a 0-1 journey is truly exhilarating! Tried a bunch of things. Some worked, some didn't. But everything taught me something.",
       "achievements": [
-        "Designed the entire product from MVP to Series A",
-        "Created the cohort-based learning experience model",
-        "Built the instructor dashboard and course creation tools",
-        "Achieved 85% course completion rate (industry avg: 15%)"
+        "Conceptualized and authored compelling scripts for video ads promoting various courses, contributing to better conversion and 45% reduced CPL",
+        "Drove 30k+ user signups for free masterclasses via organic and performance channels",
+        "Researched and crafted content for Airtribe's Product Newsletter, reaching 15k+ subscribers with 25% open rate",
+        "Took charge of marketing analytics and dashboarding, ensuring data-driven decision-making for the team",
+        "Crafted quiz content aligned with masterclass sessions using effective prompting. Drove adoption through WhatsApp messages as reminders and engagement touchpoints",
+        "Created lead magnets: Curated PM Templates, PM Interview Questions, Growth Hacking Guide, Product Management Guide — drove 2000+ leads organically",
+        "Started a new IP for Airtribe's YouTube & scripted the first 10 episodes"
       ],
       "metrics": [
-        { "label": "Course Completion", "value": "85%" },
-        { "label": "Learner Satisfaction", "value": "4.8/5" },
-        { "label": "Instructor Retention", "value": "92%" }
+        { "label": "CPL Reduction", "value": "45%" },
+        { "label": "Signups", "value": "30K+" },
+        { "label": "Newsletter Subs", "value": "15K+" }
       ],
       "learnings": [
-        "Early-stage requires rapid iteration and strong conviction",
-        "Community features can dramatically improve learning outcomes",
-        "Great education products require understanding of pedagogy"
+        "0-1 journeys teach you more than any playbook ever could",
+        "Data-driven decisions beat gut feelings at scale",
+        "Lead magnets work when they solve real problems"
       ]
     },
     {
@@ -74,22 +67,20 @@
       "company": "Side Projects",
       "role": "Maker & Experimenter",
       "period": "Ongoing",
-      "description": "Personal experiments in design, development, and creative exploration.",
+      "description": "Personal experiments in growth, content, and creative exploration.",
       "achievements": [
-        "TypeScale: A typography tool used by 50K+ designers monthly",
-        "ColorCraft: Accessible color palette generator",
-        "Design Systems Handbook: Open-source documentation project",
-        "Weekly design writing with 10K+ newsletter subscribers"
+        "Building and tinkering with various growth experiments",
+        "Collecting obscure trivia",
+        "Exploring offbeat places on motorcycle"
       ],
       "metrics": [
-        { "label": "Monthly Users", "value": "50K+" },
-        { "label": "Newsletter Subs", "value": "10K+" },
-        { "label": "GitHub Stars", "value": "2.5K" }
+        { "label": "Chess Games", "value": "∞" },
+        { "label": "Trivia", "value": "Lots" },
+        { "label": "Roads", "value": "Explored" }
       ],
       "learnings": [
-        "Side projects are the best way to learn new skills",
-        "Building in public creates accountability and community",
-        "Small tools can have outsized impact"
+        "Side projects keep the curiosity alive",
+        "The best ideas come from unexpected places"
       ]
     }
   ]
