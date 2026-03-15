@@ -1,61 +1,61 @@
 {
   "intro": {
-    "title": "Hello, I'm Alexander",
-    "content": "A product designer and developer with over a decade of experience building digital products that matter. I believe in the power of thoughtful design and clean code to create experiences that stand the test of time."
+    "title": "Hi, I'm Aswin",
+    "content": "I work in growth, focused on figuring out what actually moves metrics in meaningful ways. Most of my work sits at the intersection of performance marketing, retention, and content—running structured experiments to see what genuinely drives outcomes rather than just activity."
   },
   "whatIDo": {
     "title": "What I Do",
-    "content": "I specialize in product strategy, user experience design, and full-stack development. My work spans from early-stage startups to enterprise solutions, always with a focus on creating meaningful impact.",
+    "content": "I enjoy the mix of psychology, data, and creative tinkering that comes with growth work. My approach is experiment-driven—testing hypotheses, measuring what matters, and iterating based on real results rather than assumptions.",
     "skills": [
-      "Product Strategy & Vision",
-      "User Experience Design",
-      "Full-Stack Development",
-      "Team Leadership",
-      "Design Systems",
-      "Technical Architecture"
+      "Performance Marketing",
+      "Retention & Engagement",
+      "Content Strategy",
+      "Growth Experiments",
+      "Data Analysis",
+      "User Psychology"
     ]
   },
   "interests": {
-    "title": "Interests & Passions",
-    "content": "Beyond the digital realm, I'm fascinated by the intersection of craftsmanship and technology.",
+    "title": "Beyond Work",
+    "content": "When I'm not running experiments or diving into data, you'll find me engaged in pursuits that keep the mind sharp and the spirit curious.",
     "items": [
       {
-        "title": "Horology",
-        "description": "The art of watchmaking teaches us about precision, patience, and the beauty of mechanical complexity."
+        "title": "Chess",
+        "description": "A game of patterns, strategy, and calculated risks—not unlike growth work, really."
       },
       {
-        "title": "Architecture",
-        "description": "Great buildings, like great software, balance form and function in ways that inspire and endure."
+        "title": "Motorcycle Exploration",
+        "description": "Riding to offbeat places, discovering roads less traveled, and finding stories in unexpected corners."
       },
       {
-        "title": "Photography",
-        "description": "Capturing moments helps me see design in everyday life and appreciate visual storytelling."
+        "title": "Obscure Trivia",
+        "description": "Collecting random facts and forgotten knowledge. The kind of stuff that wins pub quizzes and sparks interesting conversations."
       },
       {
         "title": "Writing",
-        "description": "Articulating ideas clearly is a skill that serves both design documentation and personal reflection."
+        "description": "Articulating ideas, documenting experiments, and occasionally sharing thoughts that might resonate with others."
       }
     ]
   },
   "philosophy": {
-    "title": "Design Philosophy",
-    "content": "I believe that truly great design is invisible. It doesn't call attention to itself but instead enables people to accomplish their goals effortlessly. Like a well-crafted timepiece, the best products feel inevitable—as if they could have been designed no other way.",
+    "title": "How I Think About Growth",
+    "content": "Real growth isn't about vanity metrics or activity for activity's sake. It's about understanding what genuinely moves the needle—and having the patience to run proper experiments to find out.",
     "principles": [
       {
-        "title": "Simplicity Over Complexity",
-        "description": "Remove everything that doesn't serve the core purpose."
+        "title": "Outcomes Over Activity",
+        "description": "Measure what matters, not what's easy to measure."
       },
       {
-        "title": "Timelessness Over Trends",
-        "description": "Build for the long term, not the fleeting moment."
+        "title": "Experiment First",
+        "description": "Hypotheses are just educated guesses until you test them."
       },
       {
-        "title": "Craft Over Speed",
-        "description": "Take the time to do things properly."
+        "title": "Psychology Matters",
+        "description": "Behind every metric is human behavior worth understanding."
       },
       {
-        "title": "Impact Over Output",
-        "description": "Measure success by outcomes, not deliverables."
+        "title": "Compound Thinking",
+        "description": "Small improvements, consistently applied, create remarkable results."
       }
     ]
   }

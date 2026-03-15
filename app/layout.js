@@ -2,8 +2,8 @@ import './globals.css'
 import { Providers } from './providers'
 
 export const metadata = {
-  title: 'Alexander Sterling | Product Designer & Developer',
-  description: 'Crafting digital experiences with timeless elegance',
+  title: 'Aswin Sampath Kumar | Growth Specialist',
+  description: 'Figuring out what actually moves metrics in meaningful ways',
 }
 
 export default function RootLayout({ children }) {

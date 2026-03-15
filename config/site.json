@@ -1,43 +1,36 @@
 {
-  "name": "Alexander Sterling",
-  "title": "Product Designer & Developer",
-  "tagline": "Crafting digital experiences with timeless elegance",
-  "description": "Building thoughtful products at the intersection of design and technology",
-  "email": "hello@alexsterling.com",
-  "location": "San Francisco, CA",
+  "name": "Aswin Sampath Kumar",
+  "title": "Growth Specialist",
+  "tagline": "Figuring out what actually moves metrics in meaningful ways",
+  "description": "Performance marketing, retention, and content experiments",
+  "email": "Aswinwrites@gmail.com",
+  "location": "India",
   "links": [
+    {
+      "id": "twitter",
+      "name": "Twitter / X",
+      "url": "https://x.com/aswinwrites",
+      "icon": "twitter",
+      "description": "Thoughts on growth, experiments & life"
+    },
     {
       "id": "linkedin",
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/alexsterling",
+      "url": "https://www.linkedin.com/in/aswin5/",
       "icon": "linkedin",
       "description": "Professional network & career updates"
     },
     {
-      "id": "twitter",
-      "name": "Twitter / X",
-      "url": "https://twitter.com/alexsterling",
-      "icon": "twitter",
-      "description": "Thoughts on design, tech & life"
-    },
-    {
-      "id": "github",
-      "name": "GitHub",
-      "url": "https://github.com/alexsterling",
-      "icon": "github",
-      "description": "Open source projects & experiments"
-    },
-    {
-      "id": "dribbble",
-      "name": "Dribbble",
-      "url": "https://dribbble.com/alexsterling",
-      "icon": "dribbble",
-      "description": "Design portfolio & visual work"
+      "id": "instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com/slowspeedguy/",
+      "icon": "globe",
+      "description": "Motorcycle adventures & offbeat explorations"
     },
     {
       "id": "email",
       "name": "Email",
-      "url": "mailto:hello@alexsterling.com",
+      "url": "mailto:Aswinwrites@gmail.com",
       "icon": "mail",
       "description": "Get in touch directly"
     }
