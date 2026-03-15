@@ -1,0 +1,96 @@
+{
+  "experiences": [
+    {
+      "id": "namma-yatri",
+      "company": "Namma Yatri",
+      "role": "Senior Product Designer",
+      "period": "2022 - Present",
+      "description": "Leading design for India's first open-source ride-hailing platform, serving millions of users across multiple cities.",
+      "achievements": [
+        "Redesigned the rider app, increasing booking completion rate by 34%",
+        "Built and scaled the design system used across 4 product lines",
+        "Led the driver onboarding experience, reducing drop-off by 28%",
+        "Established design ops practices for a team of 8 designers"
+      ],
+      "metrics": [
+        { "label": "Daily Active Users", "value": "2M+" },
+        { "label": "Booking Rate Increase", "value": "34%" },
+        { "label": "Driver Retention", "value": "+28%" }
+      ],
+      "learnings": [
+        "Scale requires systems thinking—individual solutions don't scale",
+        "Open-source communities bring unique design challenges and opportunities",
+        "Local context matters enormously in product design"
+      ]
+    },
+    {
+      "id": "brick-bolt",
+      "company": "Brick&Bolt",
+      "role": "Product Lead",
+      "period": "2020 - 2022",
+      "description": "Led product strategy and design for a construction-tech startup digitizing home construction in India.",
+      "achievements": [
+        "Launched customer app from 0 to 100K+ downloads in first year",
+        "Designed end-to-end construction tracking experience",
+        "Built internal tools reducing project management overhead by 40%",
+        "Established the company's first design team and processes"
+      ],
+      "metrics": [
+        { "label": "App Downloads", "value": "100K+" },
+        { "label": "Operational Efficiency", "value": "+40%" },
+        { "label": "Customer NPS", "value": "72" }
+      ],
+      "learnings": [
+        "Complex B2B2C products require deep domain expertise",
+        "Internal tools deserve the same design attention as customer-facing products",
+        "Construction is ripe for thoughtful digital transformation"
+      ]
+    },
+    {
+      "id": "airtribe",
+      "company": "Airtribe",
+      "role": "Founding Designer",
+      "period": "2018 - 2020",
+      "description": "First design hire at an ed-tech startup, building the learning platform from scratch.",
+      "achievements": [
+        "Designed the entire product from MVP to Series A",
+        "Created the cohort-based learning experience model",
+        "Built the instructor dashboard and course creation tools",
+        "Achieved 85% course completion rate (industry avg: 15%)"
+      ],
+      "metrics": [
+        { "label": "Course Completion", "value": "85%" },
+        { "label": "Learner Satisfaction", "value": "4.8/5" },
+        { "label": "Instructor Retention", "value": "92%" }
+      ],
+      "learnings": [
+        "Early-stage requires rapid iteration and strong conviction",
+        "Community features can dramatically improve learning outcomes",
+        "Great education products require understanding of pedagogy"
+      ]
+    },
+    {
+      "id": "experiments",
+      "company": "Side Projects",
+      "role": "Maker & Experimenter",
+      "period": "Ongoing",
+      "description": "Personal experiments in design, development, and creative exploration.",
+      "achievements": [
+        "TypeScale: A typography tool used by 50K+ designers monthly",
+        "ColorCraft: Accessible color palette generator",
+        "Design Systems Handbook: Open-source documentation project",
+        "Weekly design writing with 10K+ newsletter subscribers"
+      ],
+      "metrics": [
+        { "label": "Monthly Users", "value": "50K+" },
+        { "label": "Newsletter Subs", "value": "10K+" },
+        { "label": "GitHub Stars", "value": "2.5K" }
+      ],
+      "learnings": [
+        "Side projects are the best way to learn new skills",
+        "Building in public creates accountability and community",
+        "Small tools can have outsized impact"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 14% 4%;
+    --foreground: 36 33% 94%;
+    --card: 24 10% 8%;
+    --card-foreground: 36 33% 94%;
+    --popover: 24 10% 8%;
+    --popover-foreground: 36 33% 94%;
+    --primary: 38 60% 55%;
+    --primary-foreground: 20 14% 4%;
+    --secondary: 24 10% 14%;
+    --secondary-foreground: 36 33% 94%;
+    --muted: 24 10% 14%;
+    --muted-foreground: 36 10% 60%;
+    --accent: 38 60% 55%;
+    --accent-foreground: 20 14% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 36 33% 94%;
+    --border: 24 10% 18%;
+    --input: 24 10% 14%;
+    --ring: 38 60% 55%;
+    --radius: 0.5rem;
+    
+    --brass: 38 60% 55%;
+    --brass-light: 38 50% 70%;
+    --brass-dark: 38 60% 35%;
+    --copper: 20 60% 45%;
+    --bronze: 25 50% 35%;
+    --cream: 36 33% 94%;
+    --charcoal: 20 14% 10%;
+    --panel: 24 10% 6%;
+  }
+
+  .light {
+    --background: 36 33% 96%;
+    --foreground: 20 14% 10%;
+    --card: 36 25% 98%;
+    --card-foreground: 20 14% 10%;
+    --popover: 36 25% 98%;
+    --popover-foreground: 20 14% 10%;
+    --primary: 38 60% 45%;
+    --primary-foreground: 36 33% 96%;
+    --secondary: 36 20% 90%;
+    --secondary-foreground: 20 14% 10%;
+    --muted: 36 15% 88%;
+    --muted-foreground: 20 10% 40%;
+    --accent: 38 60% 45%;
+    --accent-foreground: 36 33% 96%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 36 33% 96%;
+    --border: 36 15% 85%;
+    --input: 36 15% 88%;
+    --ring: 38 60% 45%;
+    
+    --brass: 38 60% 45%;
+    --brass-light: 38 50% 60%;
+    --brass-dark: 38 60% 30%;
+    --copper: 20 60% 40%;
+    --bronze: 25 50% 30%;
+    --cream: 36 33% 96%;
+    --charcoal: 20 14% 15%;
+    --panel: 36 20% 94%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .brass-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--brass-light)) 0%,
+      hsl(var(--brass)) 50%,
+      hsl(var(--brass-dark)) 100%
+    );
+  }
+
+  .brass-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--brass-light)) 0%,
+      hsl(var(--brass)) 50%,
+      hsl(var(--brass-dark)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .panel-inset {
+    background: hsl(var(--panel));
+    box-shadow: 
+      inset 2px 2px 8px rgba(0, 0, 0, 0.4),
+      inset -1px -1px 4px rgba(255, 255, 255, 0.05);
+  }
+
+  .panel-raised {
+    background: hsl(var(--card));
+    box-shadow: 
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      -2px -2px 8px rgba(255, 255, 255, 0.02),
+      inset 1px 1px 2px rgba(255, 255, 255, 0.05);
+  }
+
+  .mechanical-button {
+    position: relative;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--secondary)) 0%,
+      hsl(var(--card)) 100%
+    );
+    box-shadow: 
+      0 4px 0 hsl(var(--border)),
+      0 6px 12px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.1s ease;
+  }
+
+  .mechanical-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 
+      0 5px 0 hsl(var(--border)),
+      0 8px 16px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .mechanical-button:active {
+    transform: translateY(2px);
+    box-shadow: 
+      0 2px 0 hsl(var(--border)),
+      0 3px 6px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .dial-indicator {
+    background: radial-gradient(
+      circle at 30% 30%,
+      hsl(var(--brass-light)) 0%,
+      hsl(var(--brass)) 50%,
+      hsl(var(--brass-dark)) 100%
+    );
+  }
+
+  .vintage-border {
+    border: 1px solid hsl(var(--border));
+    position: relative;
+  }
+
+  .vintage-border::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 1px solid hsl(var(--border) / 0.5);
+    pointer-events: none;
+  }
+
+  .prose-vintage {
+    @apply text-foreground/90 leading-relaxed;
+  }
+
+  .prose-vintage h1,
+  .prose-vintage h2,
+  .prose-vintage h3 {
+    @apply font-serif text-foreground mt-8 mb-4;
+  }
+
+  .prose-vintage h1 {
+    @apply text-4xl;
+  }
+
+  .prose-vintage h2 {
+    @apply text-2xl;
+  }
+
+  .prose-vintage h3 {
+    @apply text-xl;
+  }
+
+  .prose-vintage p {
+    @apply mb-4;
+  }
+
+  .prose-vintage ul,
+  .prose-vintage ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose-vintage li {
+    @apply mb-2;
+  }
+
+  .prose-vintage blockquote {
+    @apply border-l-2 border-primary/50 pl-4 italic text-muted-foreground my-6;
+  }
+
+  .prose-vintage code {
+    @apply bg-secondary px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose-vintage pre {
+    @apply bg-secondary p-4 rounded-lg overflow-x-auto my-6;
+  }
+
+  .prose-vintage pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose-vintage strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .prose-vintage a {
+    @apply text-primary hover:text-primary/80 underline underline-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

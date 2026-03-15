@@ -1,0 +1,62 @@
+{
+  "intro": {
+    "title": "Hello, I'm Alexander",
+    "content": "A product designer and developer with over a decade of experience building digital products that matter. I believe in the power of thoughtful design and clean code to create experiences that stand the test of time."
+  },
+  "whatIDo": {
+    "title": "What I Do",
+    "content": "I specialize in product strategy, user experience design, and full-stack development. My work spans from early-stage startups to enterprise solutions, always with a focus on creating meaningful impact.",
+    "skills": [
+      "Product Strategy & Vision",
+      "User Experience Design",
+      "Full-Stack Development",
+      "Team Leadership",
+      "Design Systems",
+      "Technical Architecture"
+    ]
+  },
+  "interests": {
+    "title": "Interests & Passions",
+    "content": "Beyond the digital realm, I'm fascinated by the intersection of craftsmanship and technology.",
+    "items": [
+      {
+        "title": "Horology",
+        "description": "The art of watchmaking teaches us about precision, patience, and the beauty of mechanical complexity."
+      },
+      {
+        "title": "Architecture",
+        "description": "Great buildings, like great software, balance form and function in ways that inspire and endure."
+      },
+      {
+        "title": "Photography",
+        "description": "Capturing moments helps me see design in everyday life and appreciate visual storytelling."
+      },
+      {
+        "title": "Writing",
+        "description": "Articulating ideas clearly is a skill that serves both design documentation and personal reflection."
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "Design Philosophy",
+    "content": "I believe that truly great design is invisible. It doesn't call attention to itself but instead enables people to accomplish their goals effortlessly. Like a well-crafted timepiece, the best products feel inevitable—as if they could have been designed no other way.",
+    "principles": [
+      {
+        "title": "Simplicity Over Complexity",
+        "description": "Remove everything that doesn't serve the core purpose."
+      },
+      {
+        "title": "Timelessness Over Trends",
+        "description": "Build for the long term, not the fleeting moment."
+      },
+      {
+        "title": "Craft Over Speed",
+        "description": "Take the time to do things properly."
+      },
+      {
+        "title": "Impact Over Output",
+        "description": "Measure success by outcomes, not deliverables."
+      }
+    ]
+  }
+}

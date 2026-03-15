@@ -1,0 +1,51 @@
+{
+  "name": "Alexander Sterling",
+  "title": "Product Designer & Developer",
+  "tagline": "Crafting digital experiences with timeless elegance",
+  "description": "Building thoughtful products at the intersection of design and technology",
+  "email": "hello@alexsterling.com",
+  "location": "San Francisco, CA",
+  "links": [
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/alexsterling",
+      "icon": "linkedin",
+      "description": "Professional network & career updates"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter / X",
+      "url": "https://twitter.com/alexsterling",
+      "icon": "twitter",
+      "description": "Thoughts on design, tech & life"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com/alexsterling",
+      "icon": "github",
+      "description": "Open source projects & experiments"
+    },
+    {
+      "id": "dribbble",
+      "name": "Dribbble",
+      "url": "https://dribbble.com/alexsterling",
+      "icon": "dribbble",
+      "description": "Design portfolio & visual work"
+    },
+    {
+      "id": "email",
+      "name": "Email",
+      "url": "mailto:hello@alexsterling.com",
+      "icon": "mail",
+      "description": "Get in touch directly"
+    }
+  ],
+  "navigation": [
+    { "name": "About", "path": "/about", "icon": "user" },
+    { "name": "Work", "path": "/work", "icon": "briefcase" },
+    { "name": "Thoughts", "path": "/thoughts", "icon": "pen" },
+    { "name": "Links", "path": "/links", "icon": "link" }
+  ]
+}
