@@ -23,17 +23,30 @@
     {
       "id": "brick-bolt",
       "company": "Brick&Bolt",
-      "role": "Growth",
+      "role": "Performance Marketing",
       "period": "Previous",
-      "description": "Details coming soon.",
+      "description": "Handled a sizeable performance marketing budget of ₹1.4 Cr/month and managed lead flow for a multi-city inside sales team of 150+ members.",
       "achievements": [
-        "More details to be added"
+        "Optimized campaigns across Google Search, Meta, PMAX, YouTube, Demand Gen, Taboola, and Bing",
+        "Scaled Meta Instant Forms campaigns by reducing cost per meeting and improving leads-to-meeting ratio",
+        "Implemented custom Unbounce landing page with dynamic keyword insertion & wrote script to fetch city names and pricing dynamically",
+        "Deployed Meta CLO CAPI and Website CAPI integrations, enabling 1.5x increase in leads at similar spend levels",
+        "Collaborated with creative team to conceptualize ad creatives and performance videos",
+        "Built critical marketing dashboards and trackers with the data team for data-driven decisions",
+        "Conducted regular audits of search terms, keywords and creatives, including n-gram analysis",
+        "Led lead generation for commercial offerings (PGs, schools, retail) and drove meetings for multiple eight-figure projects",
+        "Built and managed Zapier workflows for lead allocation and pincode mapping",
+        "Created marketing performance reports and presented actionable insights to leadership"
       ],
       "metrics": [
-        { "label": "Status", "value": "TBD" }
+        { "label": "Monthly Budget", "value": "₹1.4Cr" },
+        { "label": "Sales Team", "value": "150+" },
+        { "label": "Lead Increase", "value": "1.5x" }
       ],
       "learnings": [
-        "Will update soon!"
+        "Performance marketing at scale requires constant experimentation with audience segments, bidding strategies, and optimization goals",
+        "Automation (Zapier, scripts) is key to reducing manual work and scaling efficiently",
+        "Data-driven decisions beat gut feelings when managing large budgets"
       ]
     },
     {
