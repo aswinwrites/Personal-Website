@@ -1,3 +1,4 @@
+import { getAllPosts, getSiteConfig } from '@/lib/content'
 import ThoughtsClient from './ThoughtsClient'
 
 export const metadata = {
@@ -6,5 +7,7 @@ export const metadata = {
 }
 
 export default function ThoughtsPage() {
-  return <ThoughtsClient />
+  const posts      = getAllPosts()
+  const siteConfig = getSiteConfig()
+  return <ThoughtsClient posts={posts} siteConfig={siteConfig} />
 }
