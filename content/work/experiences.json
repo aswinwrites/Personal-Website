@@ -17,7 +17,9 @@
         { "label": "Stage", "value": "Scale" }
       ],
       "learnings": [
-        "Will update this soon!"
+        "Multi-app growth at scale forces you to build playbooks fast and adapt faster",
+        "0-1 on a new product within an existing org is a completely different muscle from scaling",
+        "The best growth insights often come from obsessing over dashboards at 2am"
       ]
     },
     {
@@ -73,27 +75,6 @@
         "0-1 journeys teach you more than any playbook ever could",
         "Data-driven decisions beat gut feelings at scale",
         "Lead magnets work when they solve real problems"
-      ]
-    },
-    {
-      "id": "experiments",
-      "company": "Side Projects",
-      "role": "Maker & Experimenter",
-      "period": "Ongoing",
-      "description": "Personal experiments in growth, content, and creative exploration.",
-      "achievements": [
-        "Building and tinkering with various growth experiments",
-        "Collecting obscure trivia",
-        "Exploring offbeat places on motorcycle"
-      ],
-      "metrics": [
-        { "label": "Chess Games", "value": "∞" },
-        { "label": "Trivia", "value": "Lots" },
-        { "label": "Roads", "value": "Explored" }
-      ],
-      "learnings": [
-        "Side projects keep the curiosity alive",
-        "The best ideas come from unexpected places"
       ]
     }
   ]
