@@ -1,4 +1,4 @@
-import { getAboutContent, getSiteConfig } from '@/lib/content'
+Fix about/page.js: correct name in metadataimport { getAboutContent, getSiteConfig } from '@/lib/content'
 import AboutClient from './AboutClient'
 
 export const metadata = {
