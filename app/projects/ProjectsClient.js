@@ -1,34 +1,33 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowLeft, ExternalLink, Sun, Moon } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { ArrowLeft, ExternalLink } from 'lucide-react'
 
 const UTM = '?utm_source=aswinsampathkumar.in&utm_medium=portfolio&utm_campaign=projects'
 
 const PROJECTS = [
   {
-    emoji: 'ð',
+    emoji: '📈',
     name: 'GrowthTools',
     tagline: 'A toolkit for growth practitioners.',
-    description: 'Experiment templates, funnel audit checklists, north star metric calculators â built for people who run growth loops, not just read about them. Less theory, more signal.',
+    description: 'Experiment templates, funnel audit checklists, north star metric calculators — built for people who run growth loops, not just read about them. Less theory, more signal.',
     tags: ['Growth', 'Marketing', 'Tooling'],
     status: 'LIVE',
     url: 'https://growthtools.vercel.app/' + UTM,
   },
   {
-    emoji: 'ðºï¸',
+    emoji: '🗺️',
     name: 'BLR Weekend Explorer',
     tagline: 'Bengaluru, off the beaten path.',
-    description: 'A curated weekend guide to the city\'s hidden spots â offbeat cafes, quiet parks, motorcycle-friendly routes, and neighbourhoods Google Maps won\'t surface. For locals who are still discovering the city.',
+    description: 'A curated weekend guide to the city\'s hidden spots — offbeat cafes, quiet parks, motorcycle-friendly routes, and neighbourhoods Google Maps won\'t surface. For locals who are still discovering the city.',
     tags: ['Local Discovery', 'Travel', 'Curation'],
     status: 'WIP',
     url: 'https://blr-weekend-explorer.vercel.app/' + UTM,
   },
   {
-    emoji: 'ð',
+    emoji: '📍',
     name: 'Pinpoint',
     tagline: 'Park finder for urban explorers.',
     description: 'Locate quiet parks near you, filter by type and distance, and plan outdoor breaks without the guesswork. Built because "open Google Maps and scroll" is a terrible UX for finding green spaces.',
@@ -37,10 +36,10 @@ const PROJECTS = [
     url: 'https://pinpointpark.vercel.app/' + UTM,
   },
   {
-    emoji: 'â¡',
+    emoji: '⚡',
     name: 'CTA Flow',
     tagline: 'Prototype CTAs before you test them.',
-    description: 'A visual sandbox for marketers to iterate on button copy, placement, and conversion flow â before burning A/B test cycles on a bad hypothesis. Think Figma, but just for CTAs.',
+    description: 'A visual sandbox for marketers to iterate on button copy, placement, and conversion flow — before burning A/B test cycles on a bad hypothesis. Think Figma, but just for CTAs.',
     tags: ['Conversion', 'Marketing', 'Tooling'],
     status: 'WIP',
     url: 'https://cta-flow.vercel.app/' + UTM,
@@ -74,7 +73,6 @@ function ProjectCard({ project, index }) {
         cursor: project.url ? 'pointer' : 'default',
       }}
     >
-      {/* Shimmer on hover */}
       {hovered && (
         <motion.div
           initial={{ x: '-110%', opacity: 0 }}
@@ -167,27 +165,8 @@ function ProjectCard({ project, index }) {
 }
 
 export default function ProjectsClient({ siteConfig }) {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => { setMounted(true) }, [])
-
   return (
     <div className="relative min-h-screen bg-background">
-
-      {/* Theme toggle */}
-      <button
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        className="fixed top-4 right-4 z-50 w-9 h-9 rounded-full flex items-center justify-center border border-border/60 bg-card/80 backdrop-blur-sm hover:border-brass/40 transition-all duration-200 hover:scale-105"
-        style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }}
-      >
-        {mounted && (
-          theme === 'dark'
-            ? <Sun  className="w-3.5 h-3.5 text-brass" />
-            : <Moon className="w-3.5 h-3.5 text-muted-foreground" />
-        )}
-      </button>
-
       <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-20 pt-12 pb-16">
 
         {/* Back nav */}
