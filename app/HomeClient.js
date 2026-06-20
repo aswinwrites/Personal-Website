@@ -1,15 +1,14 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import {
   User, Briefcase, PenLine, Link as LinkIcon,
-  Sun, Moon, ArrowRight, FolderOpen,
+  ArrowRight, FolderOpen,
 } from 'lucide-react'
 
-// âââ Data ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── Data ────────────────────────────────────────────────────────────────────
 
 const NAV_ITEMS = [
   { name: 'About',    path: '/about',    icon: User,       description: 'My story & philosophy' },
@@ -29,10 +28,10 @@ const TRAITS = [
   'Experiment-first Thinker',
 ]
 
-// Simple Icons slugs â icons render in brass via CDN color param
+// Simple Icons slugs — icons render in brass via CDN color param
 const TOOLS = [
-  { name: 'Claude',     slug: 'anthropic'       },
-  { name: 'ChatGPT',    slug: 'openai'          },
+  { name: 'Claude',     slug: 'claude'          },
+  { name: 'ChatGPT',   slug: 'chatgpt'         },
   { name: 'Meta Ads',   slug: 'meta'            },
   { name: 'Google Ads', slug: 'googleads'       },
   { name: 'Firebase',   slug: 'firebase'        },
@@ -47,7 +46,7 @@ const TOOLS = [
   { name: 'Zapier',     slug: 'zapier'          },
 ]
 
-// âââ Click Sound (Web Audio API â synthesised mechanical tick) ââââââââââââââââ
+// ─── Click Sound (Web Audio API — synthesised mechanical tick) ────────────────
 
 function playClick() {
   try {
@@ -73,8 +72,8 @@ function playClick() {
   } catch (_) {}
 }
 
-// âââ Tool Belt âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-// Seamless CSS marquee â doubles the list so translateX(-50%) loops cleanly.
+// ─── Tool Belt ───────────────────────────────────────────────────────────────
+// Seamless CSS marquee — doubles the list so translateX(-50%) loops cleanly.
 
 function ToolBelt() {
   const doubled = [...TOOLS, ...TOOLS]
@@ -91,12 +90,12 @@ function ToolBelt() {
       {/* Conveyor */}
       <div className="relative overflow-hidden" style={{ height: 62 }}>
 
-        {/* Spotlight fade â left */}
+        {/* Spotlight fade — left */}
         <div
           className="absolute inset-y-0 left-0 w-14 z-10 pointer-events-none"
           style={{ background: 'linear-gradient(to right, hsl(var(--background)), transparent)' }}
         />
-        {/* Spotlight fade â right */}
+        {/* Spotlight fade — right */}
         <div
           className="absolute inset-y-0 right-0 w-14 z-10 pointer-events-none"
           style={{ background: 'linear-gradient(to left, hsl(var(--background)), transparent)' }}
@@ -138,13 +137,13 @@ function ToolBelt() {
         </div>
       </div>
 
-      {/* Keyframe lives here â scoped so it doesn't leak */}
+      {/* Keyframe lives here — scoped so it doesn't leak */}
       <style>{`@keyframes toolbelt { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }`}</style>
     </div>
   )
 }
 
-// âââ NavCard âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── NavCard ─────────────────────────────────────────────────────────────────
 
 function NavCard({ item, index }) {
   const [hovered, setHovered] = useState(false)
@@ -181,7 +180,7 @@ function NavCard({ item, index }) {
           {/* Shimmer */}
           {hovered && (
             <motion.div
-              initial={{ x: '-111%', opacity: 0 }}
+              initial={{ x: '-110%', opacity: 0 }}
               animate={{ x: '160%', opacity: 1 }}
               transition={{ duration: 0.55, ease: 'easeInOut' }}
               className="absolute inset-0 pointer-events-none"
@@ -233,16 +232,12 @@ function NavCard({ item, index }) {
   )
 }
 
-// âââ HomeClient âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── HomeClient ───────────────────────────────────────────────────────────────
 
 export default function HomeClient({ siteConfig }) {
-  const { theme, setTheme } = useTheme()
-  const [mounted,  setMounted]  = useState(false)
   const [traitIdx, setTraitIdx] = useState(0)
-  // clientX/Y for fixed-position glow â clientX/Y no container offset needed
+  // clientX/Y for fixed-position glow — no container offset needed
   const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 })
-
-  useEffect(() => { setMounted(true) }, [])
 
   // Personality ticker
   useEffect(() => {
@@ -250,7 +245,7 @@ export default function HomeClient({ siteConfig }) {
     return () => clearInterval(t)
   }, [])
 
-  // Cursor tracking â absolute viewport coords so fixed glow is correct
+  // Cursor tracking — absolute viewport coords so fixed glow is correct
   useEffect(() => {
     const h = e => setMousePos({ x: e.clientX, y: e.clientY })
     window.addEventListener('mousemove', h, { passive: true })
@@ -266,7 +261,7 @@ export default function HomeClient({ siteConfig }) {
   return (
     <div className="relative min-h-screen bg-background overflow-hidden">
 
-      {/* ââ Cursor glow â tracks actual cursor position âââââââââââââââââ */}
+      {/* ── Cursor glow — tracks actual cursor position ───────────────── */}
       <div
         className="pointer-events-none fixed inset-0 z-0"
         style={{
@@ -274,30 +269,17 @@ export default function HomeClient({ siteConfig }) {
         }}
       />
 
-      {/* ââ Film grain âââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* ── Film grain ────────────────────────────────────────────────── */}
       <div
         className="pointer-events-none fixed inset-0 z-0 opacity-[0.025]"
         style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n) /%3E%3C/svg%3E\")",
           backgroundRepeat: 'repeat',
           backgroundSize: '200px',
         }}
       />
 
-      {/* ââ Theme toggle ââââââââââââââââââââââââââââââââââââââââââââââââ */}
-      <button
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        className="fixed top-4 right-4 z-50 w-9 h-9 rounded-full flex items-center justify-center border border-border/60 bg-card/80 backdrop-blur-sm hover:border-brass/40 transition-all duration-200 hover:socale-105"
-        style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }}
-      >
-        {mounted && (
-          theme === 'dark'
-            ? <Sun  className="w-3.5 h-3.5 text-brass" />
-            : <Moon className="w-3.5 h-3.5 text-muted-foreground" />
-        )}
-      </button>
-
-      {/* ââ Main layout âââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* ── Main layout ───────────────────────────────────────────────── */}
       <div className="relative z-10 min-h-screen flex flex-col px-6 sm:px-10 lg:px-20 pt-12 pb-8 max-w-5xl mx-auto w-full">
 
         {/* Portfolio label */}
@@ -311,7 +293,7 @@ export default function HomeClient({ siteConfig }) {
           <span className="text-[10px] tracking-[0.22em] uppercase text-muted-foreground/60">Portfolio</span>
         </motion.div>
 
-        {/* ââ Name ââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+        {/* ── Name ──────────────────────────────────────────────────── */}
         <div className="mb-5 overflow-hidden">
           <motion.h1
             initial={{ y: 80 }}
@@ -333,7 +315,7 @@ export default function HomeClient({ siteConfig }) {
           </motion.h1>
         </div>
 
-        {/* Tagline */}
+        {/* ── Tagline ───────────────────────────────────────────────── */}
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -343,7 +325,7 @@ export default function HomeClient({ siteConfig }) {
           Figuring out what actually moves metrics, then engineering systems around it.
         </motion.p>
 
-        {/* Personality ticker */}
+        {/* ── Personality ticker ────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -364,7 +346,7 @@ export default function HomeClient({ siteConfig }) {
           </AnimatePresence>
         </motion.div>
 
-        {/* Tool Belt conveyor */}
+        {/* ── Tool Belt conveyor ────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -373,7 +355,7 @@ export default function HomeClient({ siteConfig }) {
           <ToolBelt />
         </motion.div>
 
-        {/* Navigation cards */}
+        {/* ── Navigation cards ──────────────────────────────────────── */}
         <div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
             {NAV_ITEMS.map((item, i) => (
@@ -382,7 +364,7 @@ export default function HomeClient({ siteConfig }) {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* ── Footer ───────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
