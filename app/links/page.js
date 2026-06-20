@@ -1,3 +1,4 @@
+import { getSiteConfig } from '@/lib/content'
 import LinksClient from './LinksClient'
 
 export const metadata = {
@@ -6,5 +7,6 @@ export const metadata = {
 }
 
 export default function LinksPage() {
-  return <LinksClient />
+  const siteConfig = getSiteConfig()
+  return <LinksClient siteConfig={siteConfig} />
 }
