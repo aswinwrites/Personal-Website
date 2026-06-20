@@ -114,12 +114,12 @@ function ToolBelt() {
               style={{ width: 44, gap: 5 }}
             >
               <div
-                style={{ opacity: 0.35, transition: 'opacity 0.22s ease' }}
-                onMouseEnter={e => { e.currentTarget.style.opacity = '0.95' }}
-                onMouseLeave={e => { e.currentTarget.style.opacity = '0.35' }}
+                style={{ opacity: 0.65, transition: 'opacity 0.22s ease' }}
+                onMouseEnter={e => { e.currentTarget.style.opacity = '1' }}
+                onMouseLeave={e => { e.currentTarget.style.opacity = '0.65' }}
               >
                 <img
-                  src={'https://cdn.simpleicons.org/' + tool.slug + '/C9A84C'}
+                  src={'https://cdn.simpleicons.org/' + tool.slug}
                   alt={tool.name}
                   width={22}
                   height={22}
@@ -181,7 +181,7 @@ function NavCard({ item, index }) {
           {/* Shimmer */}
           {hovered && (
             <motion.div
-              initial={{ x: '-110%', opacity: 0 }}
+              initial={{ x: '-111%', opacity: 0 }}
               animate={{ x: '160%', opacity: 1 }}
               transition={{ duration: 0.55, ease: 'easeInOut' }}
               className="absolute inset-0 pointer-events-none"
@@ -239,7 +239,7 @@ export default function HomeClient({ siteConfig }) {
   const { theme, setTheme } = useTheme()
   const [mounted,  setMounted]  = useState(false)
   const [traitIdx, setTraitIdx] = useState(0)
-  // clientX/Y for fixed-position glow â no container offset needed
+  // clientX/Y for fixed-position glow â clientX/Y no container offset needed
   const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 })
 
   useEffect(() => { setMounted(true) }, [])
@@ -270,11 +270,11 @@ export default function HomeClient({ siteConfig }) {
       <div
         className="pointer-events-none fixed inset-0 z-0"
         style={{
-          background: `radial-gradient(260px circle at ${mousePos.x}px ${mousePos.y}px, hsl(var(--brass)/0.11), transparent 70%)`,
+          background: `radial-gradient(208px circle at ${mousePos.x}px ${mousePos.y}px, hsl(var(--brass)/0.28), transparent 70%)`,
         }}
       />
 
-      {/* ââ Film grain ââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* ââ Film grain âââââââââââââââââââââââââââââââââââââââââââââââââââ */}
       <div
         className="pointer-events-none fixed inset-0 z-0 opacity-[0.025]"
         style={{
@@ -287,7 +287,7 @@ export default function HomeClient({ siteConfig }) {
       {/* ââ Theme toggle ââââââââââââââââââââââââââââââââââââââââââââââââ */}
       <button
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        className="fixed top-4 right-4 z-50 w-9 h-9 rounded-full flex items-center justify-center border border-border/60 bg-card/80 backdrop-blur-sm hover:border-brass/40 transition-all duration-200 hover:scale-105"
+        className="fixed top-4 right-4 z-50 w-9 h-9 rounded-full flex items-center justify-center border border-border/60 bg-card/80 backdrop-blur-sm hover:border-brass/40 transition-all duration-200 hover:socale-105"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }}
       >
         {mounted && (
@@ -333,7 +333,7 @@ export default function HomeClient({ siteConfig }) {
           </motion.h1>
         </div>
 
-        {/* ââ Tagline âââââââââââââââââââââââââââââââââââââââââââââââââ */}
+        {/* Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -343,7 +343,7 @@ export default function HomeClient({ siteConfig }) {
           Figuring out what actually moves metrics, then engineering systems around it.
         </motion.p>
 
-        {/* ââ Personality ticker ââââââââââââââââââââââââââââââââââââââ */}
+        {/* Personality ticker */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -364,7 +364,7 @@ export default function HomeClient({ siteConfig }) {
           </AnimatePresence>
         </motion.div>
 
-        {/* ââ Tool Belt conveyor ââââââââââââââââââââââââââââââââââââââ */}
+        {/* Tool Belt conveyor */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -373,34 +373,8 @@ export default function HomeClient({ siteConfig }) {
           <ToolBelt />
         </motion.div>
 
-        {/* ââ Navigation dots + cards âââââââââââââââââââââââââââââââââ */}
+        {/* Navigation cards */}
         <div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.45, duration: 0.4 }}
-            className="flex items-center gap-2 mb-3"
-          >
-            {/* Dots */}
-            <div className="flex items-center gap-1.5">
-              {[0, 1, 2].map(i => (
-                <div
-                  key={i}
-                  className="rounded-full"
-                  style={{
-                    width:      i === 0 ? 9 : 7,
-                    height:     i === 0 ? 9 : 7,
-                    background: i === 0 ? 'hsl(var(--brass))' : 'hsl(var(--border))',
-                    boxShadow:  i === 0 ? '0 0 8px hsl(var(--brass)/0.7)' : 'none',
-                  }}
-                />
-              ))}
-            </div>
-            <span className="text-[9px] tracking-[0.22em] uppercase text-muted-foreground/40 font-mono">
-              Navigation
-            </span>
-          </motion.div>
-
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
             {NAV_ITEMS.map((item, i) => (
               <NavCard key={item.path} item={item} index={i} />
@@ -408,16 +382,13 @@ export default function HomeClient({ siteConfig }) {
           </div>
         </div>
 
-        {/* ââ Footer âââââââââââââââââââââââââââââââââââââââââââââââââ */}
+        {/* Footer */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.4 }}
-          className="mt-6 flex items-center justify-between"
+          className="mt-6 flex items-center justify-end"
         >
-          <span className="text-[10px] tracking-[0.18em] uppercase text-muted-foreground/35">
-            Based in India
-          </span>
           <span className="text-[10px] text-muted-foreground/25">
             aswinwrites@gmail.com
           </span>
