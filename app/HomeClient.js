@@ -45,7 +45,7 @@ const TOOLS = [
 { name: 'Supabase', slug: 'supabase' },
 { name: 'GitHub', slug: 'github' },
 { name: 'Vercel', slug: 'vercel' },
-{ name: 'Airtable', slug_: 'airtable' },
+{ name: 'Airtable', slug: 'airtable' },
 { name: 'Zapier', slug: 'zapier' },
 ]
 
