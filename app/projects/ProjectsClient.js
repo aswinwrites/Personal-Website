@@ -11,38 +11,47 @@ const PROJECTS = [
   {
     emoji: '📈',
     name: 'GrowthTools',
-    tagline: 'A toolkit for growth practitioners.',
-    description: 'Experiment templates, funnel audit checklists, north star metric calculators — built for people who run growth loops, not just read about them. Less theory, more signal.',
-    tags: ['Growth', 'Marketing', 'Tooling'],
+    tagline: 'Utility tools for performance marketers.',
+    description: 'A collection of everyday growth tools — UTM builder, link tracker, QR code generator, App Store screenshot checker, keyword match type converter, and more. Built for marketers who\'d rather spend time on strategy than repetitive tasks.',
+    tags: ['Performance Marketing', 'Tooling', 'Growth'],
     status: 'LIVE',
     url: 'https://growthtools.vercel.app/' + UTM,
+  },
+  {
+    emoji: '📍',
+    name: 'PinPoint Park',
+    tagline: 'Never forget where you parked.',
+    description: 'A simple PWA that saves your parking location and navigates you back to your vehicle. Built because "I know it was around here somewhere" is not a navigation strategy.',
+    tags: ['Maps', 'Utility', 'PWA'],
+    status: 'LIVE',
+    url: 'https://pinpointpark.vercel.app/' + UTM,
   },
   {
     emoji: '🗺️',
     name: 'BLR Weekend Explorer',
     tagline: 'Bengaluru, off the beaten path.',
-    description: 'A curated weekend guide to the city\'s hidden spots — offbeat cafes, quiet parks, motorcycle-friendly routes, and neighbourhoods Google Maps won\'t surface. For locals who are still discovering the city.',
-    tags: ['Local Discovery', 'Travel', 'Curation'],
+    description: 'A discovery and trip-planning map for interesting places, hidden gems, food spots, nature escapes, and weekend getaways in and around Bangalore. For locals still uncovering the city.',
+    tags: ['Local Discovery', 'Travel', 'Maps'],
     status: 'WIP',
     url: 'https://blr-weekend-explorer.vercel.app/' + UTM,
   },
   {
-    emoji: '📍',
-    name: 'Pinpoint',
-    tagline: 'Park finder for urban explorers.',
-    description: 'Locate quiet parks near you, filter by type and distance, and plan outdoor breaks without the guesswork. Built because "open Google Maps and scroll" is a terrible UX for finding green spaces.',
-    tags: ['Maps', 'Utility', 'Bengaluru'],
-    status: 'LIVE',
-    url: 'https://pinpointpark.vercel.app/' + UTM,
-  },
-  {
     emoji: '⚡',
     name: 'CTA Flow',
-    tagline: 'Prototype CTAs before you test them.',
-    description: 'A visual sandbox for marketers to iterate on button copy, placement, and conversion flow — before burning A/B test cycles on a bad hypothesis. Think Figma, but just for CTAs.',
-    tags: ['Conversion', 'Marketing', 'Tooling'],
+    tagline: 'Landing pages for WhatsApp and push campaigns.',
+    description: 'A lightweight builder for communication flows designed for WhatsApp and push notification campaigns. Helps teams present videos, explanations, and clear CTAs in a structured format — before burning A/B cycles on a bad hypothesis.',
+    tags: ['WhatsApp', 'Marketing', 'Tooling'],
     status: 'WIP',
     url: 'https://cta-flow.vercel.app/' + UTM,
+  },
+  {
+    emoji: '🎶',
+    name: 'Weeknd Vibes',
+    tagline: 'Discover The Weeknd by mood and era.',
+    description: 'A recommendation app for XO fans. Discover songs based on mood, vibe, era, and listening preferences — whether you\'re deep in After Hours or want something off Trilogy.',
+    tags: ['Music', 'Discovery', 'Fan App'],
+    status: 'LIVE',
+    url: 'https://weeknd-vibes.vercel.app/' + UTM,
   },
 ]
 
@@ -205,7 +214,7 @@ export default function ProjectsClient({ siteConfig }) {
         </motion.div>
 
         {/* Project grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.name} project={project} index={i} />
           ))}
