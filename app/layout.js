@@ -1,5 +1,6 @@
 import './globals.css'
 import { Providers } from './providers'
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Aswin Sampath Kumar | Growth Specialist',
@@ -16,6 +17,13 @@ export default function RootLayout({ children }) {
         <Providers>
           {children}
         </Providers>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-TV464FT5S4" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TV464FT5S4');
+        `}</Script>
       </body>
     </html>
   )
