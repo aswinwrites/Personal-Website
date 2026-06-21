@@ -149,7 +149,7 @@ className="font-mono"
 style={{ fontSize: 7, letterSpacing: '0.06em', color: 'hsl(var(--muted-foreground)/0.28)', whiteSpace: 'nowrap' }}
 >
 {tool.name}
-<span>
+</span>
 </div>
 ))}
 </div>
