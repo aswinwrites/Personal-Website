@@ -19,10 +19,10 @@ const NAV_ITEMS = [
 ]
 
 const TRAITS = [
-'Growth Specialist',
+'Growth Marketer',
 'Motorcyclist',
-'Mountain Chaser',
-'Beach Seeker',
+'Mountain & Beach Enjoyer',
+'Sunset Seeker',
 'Chess Player',
 'Offbeat Explorer',
 'Experiment-first Thinker',
