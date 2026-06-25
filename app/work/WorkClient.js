@@ -221,7 +221,7 @@ export default function WorkClient({ experiences, siteConfig }) {
             </div>
             <h1 className="font-serif text-5xl sm:text-6xl text-foreground mb-4">Career Highlights</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              A journey through product design and development across startups and scale-ups.
+              Driving growth across 0→1 products, new markets, and scaled businesses.
             </p>
           </motion.div>
 
