@@ -404,8 +404,12 @@ transition={{ delay: 0.6, duration: 0.5 }}
 initial={{ opacity: 0 }}
 animate={{ opacity: 1 }}
 transition={{ delay: 1.1, duration: 0.4 }}
-className="mt-6 flex items-center justify-end"
+className="mt-6 flex items-center justify-between"
 >
+<span className="hidden sm:flex items-center gap-1.5 text-[9px] text-muted-foreground/25 font-mono">
+<kbd className="px-1.5 py-0.5 rounded" style={{ background: 'hsl(var(--secondary)/0.6)' }}>⌘K</kbd>
+to jump around
+</span>
 <span className="text-[10px] text-muted-foreground/25">
 aswinwrites@gmail.com
 </span>

@@ -5,21 +5,24 @@
       "company": "Namma Yatri",
       "role": "Growth",
       "period": "Present",
-      "description": "Sipping a lot of coffee and getting things done. Working on slashing CAC, scaling & engaging users for Moving Tech's portfolio of apps.",
+      "description": "Sipping a lot of coffee, thinking, context switching and getting things done. Working on slashing CAC, scaling & engaging users for Moving Tech's portfolio of apps: Namma Yatri, Bharat Taxi, Yatri Sathi, Odisha Yatri, Chennai One & Kerala Savaari.",
       "achievements": [
-        "Managing growth for the entire app portfolio: Namma Yatri, Yatri Sathi, Odisha Yatri, Chennai One & Kerala Savaari",
-        "0-1 scaling of customer acquisition and rides for Bharat Taxi",
-        "Refreshing dashboards at odd hours out of curiosity & thrill"
+        "Built the marketing attribution system from scratch in collaboration with the tech team, including Meta App Install Referrer and GCLID tracking for UAC — previously the org relied primarily on console-reported data. One of my first projects after joining, driven by a simple growth principle: Measure → Acquire → Engage → Analyse → Scale",
+        "Set up CleverTap configurations for new apps, including contextual, time-based, and third-party offer journeys and automations to drive customer engagement across the portfolio. Mentored and enabled city teams on tool usage and data, helping them become self-reliant and proactively execute campaigns",
+        "Collaborated with the creative team to launch the Made for Bengaluru brand campaign and led its digital distribution — drove a double digit % increase in MAUs and a lift in brand consideration, measured via a Google Brand Lift Survey",
+        "Set up Segwise to streamline creative analytics, identify winning creative patterns, provide daily performance summaries, and enable faster root-cause analysis of creative performance — slashed CAC by 50% while scaling spends in our best performing city",
+        "Worked on the 0-to-1 launch of Bharat Taxi, scaling it across multiple cities, with performance marketing campaigns contributing significantly to rides and active user growth",
+        "Implemented a robust day-on-day performance tracking structure and built dashboards for a real-time pulse on campaign performance, user behaviour, and re-engagement opportunities"
       ],
       "metrics": [
-        { "label": "Apps", "value": "5+" },
-        { "label": "Focus", "value": "CAC" },
+        { "label": "Apps", "value": "6" },
+        { "label": "CAC Cut", "value": "50%" },
         { "label": "Stage", "value": "Scale" }
       ],
       "learnings": [
         "Multi-app growth at scale forces you to build playbooks fast and adapt faster",
         "0-1 on a new product within an existing org is a completely different muscle from scaling",
-        "The best growth insights often come from obsessing over dashboards at 2am"
+        "The best growth insights often come from obsessing over dashboards at odd hours"
       ]
     },
     {

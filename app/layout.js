@@ -1,6 +1,8 @@
 import './globals.css'
 import { Providers } from './providers'
 import Script from 'next/script'
+import CommandPalette from '@/components/CommandPalette'
+import EasterEgg from '@/components/EasterEgg'
 
 const SITE_URL = 'https://aswinsampathkumar.in'
 
@@ -105,6 +107,8 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-background antialiased">
         <Providers>
           {children}
+          <CommandPalette />
+          <EasterEgg />
         </Providers>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-TV464FT5S4" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">{`

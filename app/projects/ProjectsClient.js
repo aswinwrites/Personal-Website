@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
@@ -9,49 +9,58 @@ const UTM = '?utm_source=aswinsampathkumar.in&utm_medium=portfolio&utm_campaign=
 
 const PROJECTS = [
   {
-    emoji: '📈',
-    name: 'GrowthTools',
-    tagline: 'Utility tools for performance marketers.',
-    description: 'A collection of everyday growth tools — UTM builder, link tracker, QR code generator, App Store screenshot checker, keyword match type converter, and more. Built for marketers who\'d rather spend time on strategy than repetitive tasks.',
+    emoji: '🛠️',
+    name: 'Tools that Marketers need',
+    tagline: 'One stop page for frequently used marketing tools.',
+    description: 'QR code generator, dynamic links, URL tracker, spreadsheet manipulation, keyword match types & much more — built for marketers who\'d rather spend time on strategy than repetitive tasks.',
     tags: ['Performance Marketing', 'Tooling', 'Growth'],
     status: 'LIVE',
-    url: 'https://growthtools.vercel.app/' + UTM,
+    url: 'https://www.marketertools.fyi/' + UTM,
   },
   {
     emoji: '📍',
-    name: 'PinPoint Park',
+    name: 'Track your parked vehicle',
     tagline: 'Never forget where you parked.',
-    description: 'A simple PWA that saves your parking location and navigates you back to your vehicle. Built because "I know it was around here somewhere" is not a navigation strategy.',
+    description: 'Built to solve a personal problem of marking the coordinates, along with a picture of where I park, when I explore trails and some uncharted territories.',
     tags: ['Maps', 'Utility', 'PWA'],
     status: 'LIVE',
     url: 'https://pinpointpark.vercel.app/' + UTM,
   },
   {
-    emoji: '🗺️',
-    name: 'BLR Weekend Explorer',
-    tagline: 'Bengaluru, off the beaten path.',
-    description: 'A discovery and trip-planning map for interesting places, hidden gems, food spots, nature escapes, and weekend getaways in and around Bangalore. For locals still uncovering the city.',
-    tags: ['Local Discovery', 'Travel', 'Maps'],
-    status: 'WIP',
-    url: 'https://blr-weekend-explorer.vercel.app/' + UTM,
+    emoji: '🏎️',
+    name: 'Automotive Crosswords',
+    tagline: 'Crosswords for the car-obsessed.',
+    description: 'A fun crossword game for automobile aficionados — clues built around cars, bikes, and everything with an engine.',
+    tags: ['Games', 'Automotive', 'Fan App'],
+    status: 'LIVE',
+    url: 'https://autocrosswords.vercel.app/' + UTM,
   },
   {
-    emoji: '⚡',
-    name: 'CTA Flow',
-    tagline: 'Landing pages for WhatsApp and push campaigns.',
-    description: 'A lightweight builder for communication flows designed for WhatsApp and push notification campaigns. Helps teams present videos, explanations, and clear CTAs in a structured format — before burning A/B cycles on a bad hypothesis.',
-    tags: ['WhatsApp', 'Marketing', 'Tooling'],
+    emoji: '⛰️',
+    name: 'BLR Weekend Getaway places',
+    tagline: 'Bengaluru, off the beaten path.',
+    description: 'Curation of all the go-to places around Bangalore. Started as a spreadsheet to personally track my trips, later went mildly popular in motorcycling groups. Still a work in progress.',
+    tags: ['Local Discovery', 'Travel', 'Maps'],
     status: 'WIP',
-    url: 'https://cta-flow.vercel.app/' + UTM,
+    url: 'https://weekendexplorer.in/' + UTM,
   },
   {
     emoji: '🎶',
-    name: 'Weeknd Vibes',
+    name: "Mood-based curator of Weeknd's Songs",
     tagline: 'Discover The Weeknd by mood and era.',
-    description: 'A recommendation app for XO fans. Discover songs based on mood, vibe, era, and listening preferences — whether you\'re deep in After Hours or want something off Trilogy.',
+    description: 'Big-time Abel fan. Just a fan/fun project to curate his songs based on mood — whether you\'re deep in After Hours or want something off Trilogy.',
     tags: ['Music', 'Discovery', 'Fan App'],
     status: 'LIVE',
     url: 'https://weeknd-vibes.vercel.app/' + UTM,
+  },
+  {
+    emoji: '📱',
+    name: 'Landing page builder for WhatsApp Messages',
+    tagline: 'CTAs for WhatsApp, made simple.',
+    description: 'Built to solve a personal problem of needing to add multiple links or CTAs to WhatsApp messages which are explanatory in nature. This easy landing page builder solves it.',
+    tags: ['WhatsApp', 'Marketing', 'Tooling'],
+    status: 'WIP',
+    url: 'https://cta-flow.vercel.app/' + UTM,
   },
 ]
 
@@ -62,14 +71,31 @@ const STATUS_STYLES = {
 
 function ProjectCard({ project, index }) {
   const [hovered, setHovered] = useState(false)
+  const [tilt, setTilt] = useState({ x: 0, y: 0 })
+  const ref = useRef(null)
   const status = STATUS_STYLES[project.status] || STATUS_STYLES.LIVE
+
+  const onMove = (e) => {
+    if (!ref.current) return
+    const r = ref.current.getBoundingClientRect()
+    const x = (e.clientX - r.left) / r.width - 0.5
+    const y = (e.clientY - r.top) / r.height - 0.5
+    setTilt({ x: -y * 10, y: x * 10 })
+  }
+
+  const onLeave = () => {
+    setHovered(false)
+    setTilt({ x: 0, y: 0 })
+  }
 
   const card = (
     <motion.div
+      ref={ref}
       onHoverStart={() => setHovered(true)}
-      onHoverEnd={() => setHovered(false)}
-      animate={{ y: hovered ? -3 : 0 }}
-      transition={{ duration: 0.2 }}
+      onHoverEnd={onLeave}
+      onMouseMove={onMove}
+      animate={{ y: hovered ? -3 : 0, rotateX: tilt.x, rotateY: tilt.y }}
+      transition={{ type: 'spring', stiffness: 260, damping: 20, mass: 0.5 }}
       className="relative rounded-xl overflow-hidden h-full"
       style={{
         background: hovered
@@ -161,6 +187,7 @@ function ProjectCard({ project, index }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 + index * 0.08, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
       className="h-full"
+      style={{ perspective: '600px' }}
     >
       {project.url ? (
         <a href={project.url} target="_blank" rel="noopener noreferrer" className="block h-full">
