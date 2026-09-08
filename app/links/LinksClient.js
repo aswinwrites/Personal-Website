@@ -1,13 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { 
-  ArrowLeft, 
-  ExternalLink, 
-  Sun, 
-  Moon,
+import {
+  ArrowLeft,
+  ExternalLink,
   Linkedin,
   Twitter,
   Github,
@@ -16,7 +14,6 @@ import {
   Globe,
   Link as LinkIcon
 } from 'lucide-react'
-import { useTheme } from 'next-themes'
 
 const iconMap = {
   linkedin: Linkedin,
@@ -26,36 +23,6 @@ const iconMap = {
   mail: Mail,
   globe: Globe,
   link: LinkIcon,
-}
-
-const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
-  return (
-    <motion.button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-6 right-6 w-12 h-12 rounded-full flex items-center justify-center z-50"
-      style={{
-        background: 'linear-gradient(135deg, hsl(var(--card)), hsl(var(--secondary)))',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
-      }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {theme === 'dark' ? (
-        <Sun className="w-5 h-5 text-brass" />
-      ) : (
-        <Moon className="w-5 h-5 text-brass" />
-      )}
-    </motion.button>
-  )
 }
 
 const BackButton = () => (
@@ -182,7 +149,6 @@ const LinkCard = ({ link, index }) => {
 export default function LinksClient({ siteConfig }) {
   return (
     <>
-      <ThemeToggle />
       <BackButton />
 
       <main className="min-h-screen py-24 px-6">

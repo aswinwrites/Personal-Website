@@ -3,35 +3,12 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowLeft, Sparkles, Target, Heart, Compass } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react'
-import { Sun, Moon } from 'lucide-react'
 
 const sectionIcons = {
   intro:      Sparkles,
   whatIDo:    Target,
   interests:  Heart,
   philosophy: Compass,
-}
-
-const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => { setMounted(true) }, [])
-  if (!mounted) return null
-  return (
-    <motion.button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-6 right-6 w-10 h-10 rounded-full flex items-center justify-center z-50 border border-border/60 bg-card/80 backdrop-blur-sm hover:border-brass/40 transition-colors"
-      style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {theme === 'dark'
-        ? <Sun  className="w-4 h-4 text-brass" />
-        : <Moon className="w-4 h-4 text-muted-foreground" />}
-    </motion.button>
-  )
 }
 
 const BackButton = () => (
@@ -80,7 +57,6 @@ const Section = ({ title, icon: Icon, children, index }) => (
 export default function AboutClient({ aboutContent, siteConfig }) {
   return (
     <>
-      <ThemeToggle />
       <BackButton />
       <main className="min-h-screen py-24 px-6">
         <div className="max-w-2xl mx-auto">
